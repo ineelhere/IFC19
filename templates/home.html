@@ -1,0 +1,248 @@
+
+<!doctype html>
+<html lang="en">
+<title>IFC19 | Home</title>
+  <head>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/#"><strong>INDIA FIGHTS COVID19</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" href="helpline/" target="_blank">Helplines</a>
+      <a class="nav-item nav-link" href="research/" target="_blank">Research</a>
+      <a class="nav-item nav-link" href="/blog">About</a>
+
+    </div>
+  </div>
+</nav>
+<br>
+<marquee behavior="scroll" direction="left"><strong>To prevent the spread of COVID-19: Clean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance. Follow the directions of your local health authority.</strong></marquee> <hr>
+
+    <div class="container">
+     <h1 align='center'>Realtime updates on COVID19 situation in INDIA</h1> <br>
+
+      <div class="card text-center">
+        <div class="card-header">
+          <strong>ALL-INDIA SITUATION     </strong> [ Last update - {{update}} ]
+        </div>
+        <div class="card-body">
+
+
+
+<div class="card-group">
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">
+    <strong>  Total numbers till date </strong>
+    </div>
+  </div>
+      <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          Confirmed Cases : {{confirmed}}
+        </div>
+      </div>
+      <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          Recoverd Cases : {{recovered}}
+        </div>
+      </div>
+      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          Death Cases : {{deaths}}
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group", align= 'center'>
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <strong>Numbers since last update</strong>
+        </div>
+      </div>
+      <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">
+            Confirmed Cases : {{confirmed24}}
+            </div>
+          </div>
+          <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header">
+              Recoverd Cases : {{recovered24}}
+            </div>
+          </div>
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-header">
+            Death Cases : {{deaths24}}
+            </div>
+          </div>
+        </div>
+
+  </div>
+  <div class="card-footer text-muted">
+    See below for state specific statistics
+  </div>
+</div>
+
+
+<br>
+<!-- ----------------------------------states---------------------------------- --> <br>
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 15px;
+		border: 1px solid #CCC;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+    padding: 9px;
+    text-align: center;
+	}
+	.tableizer-table th {
+		background-color: purple;
+		color: #FFF;
+		font-weight: bold;
+    padding: 9px;
+    text-align: center;
+	}
+  #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+</style>
+<h5 align='center'><strong>COVID19 STATISTICS IN INDIAN STATES AND UTs  &nbsp; &nbsp; &nbsp;<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter State/UT Name"> </strong><br></h5>
+
+
+<table class="tableizer-table" id="myTable">
+  <thead><tr class="tableizer-firstrow"><th>State or Unioin Territory</th><th>Confirmed cases till date</th><th>Confirmed cases since last update</th><th>Recoveries till date</th><th>Recoveries since last update</th><th>Deaths till date</th><th>Deaths since last update</th></tr></thead><tbody>
+ <tr><td>Andaman and Nicobar Islands</td><td>{{confirmedan}}</td><td>{{confirmed24an}}</td><td>{{recoveredan}}</td><td>{{recovered24an}}</td><td>{{deathsan}}</td><td>{{deaths24an}}</td></tr>
+ <tr><td>Andhra Pradesh</td><td>{{confirmedap}}</td><td>{{confirmed24ap}}</td><td>{{recoveredap}}</td><td>{{recovered24ap}}</td><td>{{deathsap}}</td><td>{{deaths24ap}}</td></tr>
+ <tr><td>Arunachal Pradesh</td><td>{{confirmedar}}</td><td>{{confirmed24ar}}</td><td>{{recoveredar}}</td><td>{{recovered24ar}}</td><td>{{deathsar}}</td><td>{{deaths24ar}}</td></tr>
+ <tr><td>Assam</td><td>{{confirmedas}}</td><td>{{confirmed24as}}</td><td>{{recoveredas}}</td><td>{{recovered24as}}</td><td>{{deathsas}}</td><td>{{deaths24as}}</td></tr>
+ <tr><td>Bihar</td><td>{{confirmedbr}}</td><td>{{confirmed24br}}</td><td>{{recoveredbr}}</td><td>{{recovered24br}}</td><td>{{deathsbr}}</td><td>{{deaths24br}}</td></tr>
+ <tr><td>Chandigarh</td><td>{{confirmedch}}</td><td>{{confirmed24ch}}</td><td>{{recoveredch}}</td><td>{{recovered24ch}}</td><td>{{deathsch}}</td><td>{{deaths24ch}}</td></tr>
+ <tr><td>Chhattisgarh</td><td>{{confirmedchh}}</td><td>{{confirmed24chh}}</td><td>{{recoveredchh}}</td><td>{{recovered24chh}}</td><td>{{deathschh}}</td><td>{{deaths24chh}}</td></tr>
+ <tr><td>Dadra and Nagar Haveli and Daman and Diu</td><td>{{confirmeddnhdd}}</td><td>{{confirmed24dnhdd}}</td><td>{{recovereddnhdd}}</td><td>{{recovered24dnhdd}}</td><td>{{deathsdnhdd}}</td><td>{{deaths24dnhdd}}</td></tr>
+ <tr><td>Delhi</td><td>{{confirmeddl}}</td><td>{{confirmed24dl}}</td><td>{{recovereddl}}</td><td>{{recovered24dl}}</td><td>{{deathsdl}}</td><td>{{deaths24dl}}</td></tr>
+ <tr><td>Goa</td><td>{{confirmedgoa}}</td><td>{{confirmed24goa}}</td><td>{{recoveredgoa}}</td><td>{{recovered24goa}}</td><td>{{deathsgoa}}</td><td>{{deaths24goa}}</td></tr>
+ <tr><td>Gujarat</td><td>{{confirmedgj}}</td><td>{{confirmed24gj}}</td><td>{{recoveredgj}}</td><td>{{recovered24gj}}</td><td>{{deathsgj}}</td><td>{{deaths24gj}}</td></tr>
+ <tr><td>Haryana</td><td>{{confirmedhr}}</td><td>{{confirmed24hr}}</td><td>{{recoveredhr}}</td><td>{{recovered24hr}}</td><td>{{deathshr}}</td><td>{{deaths24hr}}</td></tr>
+ <tr><td>Himachal Pradesh</td><td>{{confirmedhp}}</td><td>{{confirmed24hp}}</td><td>{{recoveredhp}}</td><td>{{recovered24hp}}</td><td>{{deathshp}}</td><td>{{deaths24hp}}</td></tr>
+ <tr><td>Jammu and Kashmir</td><td>{{confirmedjk}}</td><td>{{confirmed24jk}}</td><td>{{recoveredjk}}</td><td>{{recovered24jk}}</td><td>{{deathsjk}}</td><td>{{deaths24jk}}</td></tr>
+ <tr><td>Jharkhand</td><td>{{confirmedjr}}</td><td>{{confirmed24jr}}</td><td>{{recoveredjr}}</td><td>{{recovered24jr}}</td><td>{{deathsjr}}</td><td>{{deaths24jr}}</td></tr>
+ <tr><td>Karnataka</td><td>{{confirmedka}}</td><td>{{confirmed24ka}}</td><td>{{recoveredka}}</td><td>{{recovered24ka}}</td><td>{{deathska}}</td><td>{{deaths24ka}}</td></tr>
+ <tr><td>Kerala</td><td>{{confirmedkl}}</td><td>{{confirmed24kl}}</td><td>{{recoveredkl}}</td><td>{{recovered24kl}}</td><td>{{deathskl}}</td><td>{{deaths24kl}}</td></tr>
+ <tr><td>Ladakh</td><td>{{confirmedlh}}</td><td>{{confirmed24lh}}</td><td>{{recoveredlh}}</td><td>{{recovered24lh}}</td><td>{{deathslh}}</td><td>{{deaths24lh}}</td></tr>
+ <tr><td>Lakshadweep</td><td>{{confirmedld}}</td><td>{{confirmed24ld}}</td><td>{{recoveredld}}</td><td>{{recovered24ld}}</td><td>{{deathsld}}</td><td>{{deaths24ld}}</td></tr>
+ <tr><td>Madhya Pradesh</td><td>{{confirmedmp}}</td><td>{{confirmed24mp}}</td><td>{{recoveredmp}}</td><td>{{recovered24mp}}</td><td>{{deathsmp}}</td><td>{{deaths24mp}}</td></tr>
+ <tr><td>Maharashtra</td><td>{{confirmedmh}}</td><td>{{confirmed24mh}}</td><td>{{recoveredmh}}</td><td>{{recovered24mh}}</td><td>{{deathsmh}}</td><td>{{deaths24mh}}</td></tr>
+ <tr><td>Manipur</td><td>{{confirmedmn}}</td><td>{{confirmed24mn}}</td><td>{{recoveredmn}}</td><td>{{recovered24mn}}</td><td>{{deathsmn}}</td><td>{{deaths24mn}}</td></tr>
+ <tr><td>Meghalaya</td><td>{{confirmedmg}}</td><td>{{confirmed24mg}}</td><td>{{recoveredmg}}</td><td>{{recovered24mg}}</td><td>{{deathsmg}}</td><td>{{deaths24mg}}</td></tr>
+ <tr><td>Mizoram</td><td>{{confirmedmz}}</td><td>{{confirmed24mz}}</td><td>{{recoveredmz}}</td><td>{{recovered24mz}}</td><td>{{deathsmz}}</td><td>{{deaths24mz}}</td></tr>
+ <tr><td>Nagaland</td><td>{{confirmedng}}</td><td>{{confirmed24ng}}</td><td>{{recoveredng}}</td><td>{{recovered24ng}}</td><td>{{deathsng}}</td><td>{{deaths24ng}}</td></tr>
+ <tr><td>Odisha</td><td>{{confirmedor}}</td><td>{{confirmed24or}}</td><td>{{recoveredor}}</td><td>{{recovered24or}}</td><td>{{deathsor}}</td><td>{{deaths24or}}</td></tr>
+ <tr><td>Puducherry</td><td>{{confirmedpy}}</td><td>{{confirmed24py}}</td><td>{{recoveredpy}}</td><td>{{recovered24py}}</td><td>{{deathspy}}</td><td>{{deaths24py}}</td></tr>
+ <tr><td>Punjab</td><td>{{confirmedpb}}</td><td>{{confirmed24pb}}</td><td>{{recoveredpb}}</td><td>{{recovered24pb}}</td><td>{{deathspb}}</td><td>{{deaths24pb}}</td></tr>
+ <tr><td>Rajasthan</td><td>{{confirmedrj}}</td><td>{{confirmed24rj}}</td><td>{{recoveredrj}}</td><td>{{recovered24rj}}</td><td>{{deathsrj}}</td><td>{{deaths24rj}}</td></tr>
+ <tr><td>Sikkim</td><td>{{confirmedsk}}</td><td>{{confirmed24sk}}</td><td>{{recoveredsk}}</td><td>{{recovered24sk}}</td><td>{{deathssk}}</td><td>{{deaths24sk}}</td></tr>
+ <tr><td>State Unknown</td><td>{{confirmedsu}}</td><td>{{confirmed24su}}</td><td>{{recoveredsu}}</td><td>{{recovered24su}}</td><td>{{deathssu}}</td><td>{{deaths24su}}</td></tr>
+ <tr><td>Tamil Nadu</td><td>{{confirmedtn}}</td><td>{{confirmed24tn}}</td><td>{{recoveredtn}}</td><td>{{recovered24tn}}</td><td>{{deathstn}}</td><td>{{deaths24tn}}</td></tr>
+ <tr><td>Telangana</td><td>{{confirmedts}}</td><td>{{confirmed24ts}}</td><td>{{recoveredts}}</td><td>{{recovered24ts}}</td><td>{{deathsts}}</td><td>{{deaths24ts}}</td></tr>
+ <tr><td>Tripura</td><td>{{confirmedtr}}</td><td>{{confirmed24tr}}</td><td>{{recoveredtr}}</td><td>{{recovered24tr}}</td><td>{{deathstr}}</td><td>{{deaths24tr}}</td></tr>
+ <tr><td>Uttar Pradesh</td><td>{{confirmedup}}</td><td>{{confirmed24up}}</td><td>{{recoveredup}}</td><td>{{recovered24up}}</td><td>{{deathsup}}</td><td>{{deaths24up}}</td></tr>
+ <tr><td>Uttarakhand</td><td>{{confirmeduk}}</td><td>{{confirmed24uk}}</td><td>{{recovereduk}}</td><td>{{recovered24uk}}</td><td>{{deathsuk}}</td><td>{{deaths24uk}}</td></tr>
+ <tr><td>West Bengal</td><td>{{confirmedwb}}</td><td>{{confirmed24wb}}</td><td>{{recoveredwb}}</td><td>{{recovered24wb}}</td><td>{{deathswb}}</td><td>{{deaths24wb}}</td></tr>
+</tbody></table>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script> <br>
+<p align = 'center'><a href="https://mohfw.gov.in/" target="_blank" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Visit the Ministry of Health
+and Family Welfare Website for other details</a></p>
+
+<br><br><br><br>  <hr> <footer class="text-muted">
+
+  <marquee behavior="scroll" direction="left"><strong>Data sources : | arogya.maharashtra.gov.in | | assam.gov.in | | cghealth.nic.in | | chdcovid19.in | | collectorate.py.gov.in | | covid.icmr.org.in | | covid.ladakh.gov.in | | covid19.itanagarsmartcity.in | | covid19.karnataka.gov.in | | covid19.telangana.gov.in | | dashboard.kerala.gov.in | | delhifightscorona.in | | dhs.kerala.gov.in | | dronamaps.com | | facebook.com | | goa.gov.in | | gujcovid19.gujarat.gov.in | | health.mizoram.gov.in | | health.odisha.gov.in | | health.uk.gov.in | | hmfw.ap.gov.in | | icmr.nic.in | | karunadu.karnataka.gov.in | | mahe.gov.in | | meghalayaonline.gov.in | | mobile.twitter.com | | mohfw.gov.in | | mphealthresponse.nhmmp.gov.in | | mpinfo.org | | nhmharyana.gov.in | | nrhmhp.gov.in | | nrhmmanipur.org | | pbhealth.gov.in | | phdmah.maps.arcgis.com | | rajswasthya.nic.in | | stopcoronatn.in | | twitter.com | | wbhealth.gov.in |</strong></marquee>
+       <div class="container text-center">
+         <p>&copy;IndraneelChakraborty | {% now "Y" %} </p>
+         </div>
+     </footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
