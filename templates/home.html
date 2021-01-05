@@ -1,31 +1,90 @@
 
+
 <!doctype html>
 <html lang="en">
 <title>IFC19 | Home</title>
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <style>#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}</style>
 
+    <link rel="shortcut icon" type="image/png" href="data:image/png;base64,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">
+    <script>
+   window.onload = function () {
+    var chart= new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      title:{
+        text: "Confirmed COVID19 cases in Indian states and UTs",
+        horizontalAlign: "center"
+      },
+      data: [{
+        type: "doughnut",
+        startAngle: 60,
+        //innerRadius: 60,
+        indexLabelFontSize: 17,
+        indexLabel: "{label} ",
+        toolTipContent: "<b>{label}:</b> {y} ",
+    dataPoints: [
+                {y: {{confirmed1}}, label: "{{state1}}"},
+                {y: {{confirmed2}}, label: "{{state2}}"},
+                {y: {{confirmed3}}, label: "{{state3}}"},
+                {y: {{confirmed4}}, label: "{{state4}}"},
+                {y: {{confirmed5}}, label: "{{state5}}"},
+                {y: {{confirmed6}}, label: "{{state6}}"},
+                {y: {{confirmed7}}, label: "{{state7}}"},
+                {y: {{confirmed8}}, label: "{{state8}}"},
+                {y: {{confirmed9}}, label: "{{state9}}"},
+                {y: {{confirmed10}}, label: "{{state10}}"},
+                {y: {{confirmed11}}, label: "{{state11}}"},
+                {y: {{confirmed12}}, label: "{{state12}}"},
+                {y: {{confirmed13}}, label: "{{state13}}"},
+                {y: {{confirmed14}}, label: "{{state14}}"},
+                {y: {{confirmed15}}, label: "{{state15}}"},
+                {y: {{confirmed16}}, label: "{{state16}}"},
+                {y: {{confirmed17}}, label: "{{state17}}"},
+                {y: {{confirmed18}}, label: "{{state18}}"},
+                {y: {{confirmed19}}, label: "{{state19}}"},
+                {y: {{confirmed20}}, label: "{{state20}}"},
+                {y: {{confirmed21}}, label: "{{state21}}"},
+                {y: {{confirmed22}}, label: "{{state22}}"},
+                {y: {{confirmed23}}, label: "{{state23}}"},
+                {y: {{confirmed24}}, label: "{{state24}}"},
+                {y: {{confirmed25}}, label: "{{state25}}"},
+                {y: {{confirmed26}}, label: "{{state26}}"},
+                {y: {{confirmed27}}, label: "{{state27}}"},
+                {y: {{confirmed28}}, label: "{{state28}}"},
+                {y: {{confirmed29}}, label: "{{state29}}"},
+                {y: {{confirmed30}}, label: "{{state30}}"},
+                {y: {{confirmed31}}, label: "{{state31}}"},
+                {y: {{confirmed32}}, label: "{{state32}}"},
+                {y: {{confirmed33}}, label: "{{state33}}"},
+                {y: {{confirmed34}}, label: "{{state34}}"},
+                {y: {{confirmed35}}, label: "{{state35}}"},
+                {y: {{confirmed36}}, label: "{{state36}}"},
+                {y: {{confirmed37}}, label: "{{state37}}"},
 
+            ]
+      }]
+    });
+    chart.render();}
+    </script>
+
+<!-- ---------- -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
     <!-- Bootstrap core CSS -->
 <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+
+
 <meta name="theme-color" content="#563d7c">
 
 
@@ -45,113 +104,125 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+
     <link href="album.css" rel="stylesheet">
+
+
+
   </head>
+
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/#"><strong>INDIA FIGHTS COVID19</strong></a>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" href="/#"><strong>INDIA FIGHTS COVID19 <img src="https://img.icons8.com/color/48/000000/india.png"/></strong></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="helpline/" target="_blank">Helplines</a>
-      <a class="nav-item nav-link" href="research/" target="_blank">Research</a>
-      <a class="nav-item nav-link" href="/blog">About</a>
+<div class="navbar-nav ml-auto ">
+
+        <a class="nav-item nav-link " href="https://indraneel.pythonanywhere.com/about/">About COVID19</a>
+      <a class="nav-item nav-link" href="https://indraneel.pythonanywhere.com/helpline/" target="">Helplines</a>
+      <a class="nav-item nav-link" href="https://indraneel.pythonanywhere.com/resources/" target="">Resources</a>
+      <a class="nav-item nav-link" href="https://forms.gle/imu5E53nfg7ntuAX7" target="_blank">Feedback</a>
 
     </div>
   </div>
 </nav>
-<br>
-<marquee behavior="scroll" direction="left"><strong>To prevent the spread of COVID-19: Clean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance. Follow the directions of your local health authority.</strong></marquee> <hr>
 
-    <div class="container">
-     <h1 align='center'>Realtime updates on COVID19 situation in INDIA</h1> <br>
+
+    <br>
+<marquee behavior="scroll" direction="left" style="color:#4B0082;"><strong>To prevent the spread of COVID-19: Clean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance. Follow the directions of your local health authority. Masks should only be used by one person. All masks should be changed if soiled or wet; a soiled or wet mask should not be worn for an extended period of time. Non-medical masks should be washed frequently and handled carefully, so as not to contaminate other items. Clothing fabrics used to make masks should be checked for the highest permitted washing temperature, which is indicated on the clothing label. Non-woven polypropylene (PP) spunbond may be washed at high temperature, up to 140°C. The combination of non-woven PP spunbond and cotton can tolerate high temperatures; masks made of these combinations may be steamed or boiled. Where hot water is not available, wash mask with soap/detergent at room temperature water, followed by either i) boiling mask for one minute OR ii) soak mask in 0.1% chlorine for one minute then thoroughly rinse mask with room temperature water, to avoid any toxic residual of chlorine.</strong></marquee> <hr>
+<br>
+<div class = 'container'>
+     <h3 align='center'>Realtime updates on COVID19 situation in INDIA</h3>
 
       <div class="card text-center">
         <div class="card-header">
-          <strong>ALL-INDIA SITUATION     </strong> [ Last update - {{update}} ]
+          <strong>ALL-INDIA SITUATION     </strong> [ Last update - {{update}} IST ] <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
         </div>
         <div class="card-body">
+<div class = 'container'>
+
+    <table class="table table-bordered align = "center">
+
+  <tbody>
+    <tr class="table-info">
+      <th scope="row">CONFIRMED</th>
+      <td class="bg-info"><strong> {{confirmed0}} till date</strong></td>
+      <td class="bg-info"> <strong> {{confirmed240}} today</strong></td>
+     </tr>
+    <tr class="table-warning">
+      <th scope="row">ACTIVE</th>
+      <td class="bg-warning" colspan="2"><strong>{{active0}} currently</strong></td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">RECOVERIES</th>
+      <td class="bg-success"><strong>{{recovered0}} till date</strong></td>
+      <td class="bg-success"><strong>{{recovered240}} today</strong></td>
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">DEATHS</th>
+      <td class="bg-danger"><strong>{{deaths0}} till date</strong></td>
+      <td class="bg-danger"><strong>{{deaths240}} today</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 
+</div>
 
-<div class="card-group">
-  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header">
-    <strong>  Total numbers till date </strong>
-    </div>
-  </div>
-      <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          Confirmed Cases : {{confirmed}}
-        </div>
-      </div>
-      <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          Recoverd Cases : {{recovered}}
-        </div>
-      </div>
-      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          Death Cases : {{deaths}}
-        </div>
-      </div>
-    </div>
 
-    <div class="card-group", align= 'center'>
-      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-          <strong>Numbers since last update</strong>
-        </div>
-      </div>
-      <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">
-            Confirmed Cases : {{confirmed24}}
-            </div>
-          </div>
-          <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <div class="card-header">
-              Recoverd Cases : {{recovered24}}
-            </div>
-          </div>
-          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-header">
-            Death Cases : {{deaths24}}
-            </div>
-          </div>
-        </div>
+<button type="button" class="btn btn-outline-dark btn-lg"  data-toggle="tooltip" data-placement="bottom" title="(Total Recovered Cases / Total Confirmed cases) * 100"><strong> COVID19 INDIA RECOVERY RATE = {{rec}}%  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+  <path fill-rule="evenodd" d="M8 1.314C3.562-3.248-7.534 4.735 8 15V1.314z"/>
+  <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+</svg></strong></button> <br>
+
 
   </div>
   <div class="card-footer text-muted">
     See below for state specific statistics
   </div>
 </div>
+</div>
+<br>
+<div id="chartContainer" style="height: 600px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
 <br>
 <!-- ----------------------------------states---------------------------------- --> <br>
+<div class="container">
 <style type="text/css">
-	table.tableizer-table {
-		font-size: 15px;
-		border: 1px solid #CCC;
-		font-family: Arial, Helvetica, sans-serif;
-	}
-	.tableizer-table td {
-		padding: 4px;
-		margin: 3px;
-		border: 1px solid #CCC;
+  table.tableizer-table {
+    font-size: 15px;
+    border: 1px solid #CCC;
+    font-family: Arial, Helvetica, sans-serif;
+    display:block;
+        height: calc(100vh - 118px);
+        overflow-y: scroll;
+        overflow-x: scroll;
+  }
+  .tableizer-table td {
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid #CCC;
     padding: 9px;
     text-align: center;
-	}
-	.tableizer-table th {
-		background-color: purple;
-		color: #FFF;
-		font-weight: bold;
-    padding: 9px;
-    text-align: center;
-	}
+  }
+  .tableizer-table th {
+    background-color: purple;
+    color: #FFF;
+    font-weight: bold;
+        padding: 9px;
+        text-align: center;
+
+  }
   #myInput {
   background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
@@ -162,49 +233,52 @@
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
+
 </style>
 <h5 align='center'><strong>COVID19 STATISTICS IN INDIAN STATES AND UTs  &nbsp; &nbsp; &nbsp;<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter State/UT Name"> </strong><br></h5>
+<p align='center'>(scroll right for all columns)</p>
 
+<table class="tableizer-table table table-hover" id="myTable">
+  <thead style = "position: sticky; z-index: 2; top: 0;"><tr class="tableizer-firstrow"><th>State or Unioin Territory</th><th>Confirmed cases till date</th><th>Confirmed cases today</th><th>Recoveries till date</th><th>Recoveries today</th><th>Deaths till date</th><th>Deaths today</th></tr></thead><tbody>
+    <tr><td style="font-weight: bold;">{{state0}}</td><td bgcolor='#98f5ef'>{{confirmed0}}</td><td bgcolor='#98f5ef'>{{confirmed240}}</td><td bgcolor='#95f78b'>{{recovered0}}</td><td bgcolor='#95f78b'>{{recovered240}}</td><td bgcolor='#faa596'>{{deaths0}}</td><td bgcolor='#faa596'>{{deaths240}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state1}}</td><td bgcolor='#98f5ef'>{{confirmed1}}</td><td bgcolor='#98f5ef'>{{confirmed241}}</td><td bgcolor='#95f78b'>{{recovered1}}</td><td bgcolor='#95f78b'>{{recovered241}}</td><td bgcolor='#faa596'>{{deaths1}}</td><td bgcolor='#faa596'>{{deaths241}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state2}}</td><td bgcolor='#98f5ef'>{{confirmed2}}</td><td bgcolor='#98f5ef'>{{confirmed242}}</td><td bgcolor='#95f78b'>{{recovered2}}</td><td bgcolor='#95f78b'>{{recovered242}}</td><td bgcolor='#faa596'>{{deaths2}}</td><td bgcolor='#faa596'>{{deaths242}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state3}}</td><td bgcolor='#98f5ef'>{{confirmed3}}</td><td bgcolor='#98f5ef'>{{confirmed243}}</td><td bgcolor='#95f78b'>{{recovered3}}</td><td bgcolor='#95f78b'>{{recovered243}}</td><td bgcolor='#faa596'>{{deaths3}}</td><td bgcolor='#faa596'>{{deaths243}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state4}}</td><td bgcolor='#98f5ef'>{{confirmed4}}</td><td bgcolor='#98f5ef'>{{confirmed244}}</td><td bgcolor='#95f78b'>{{recovered4}}</td><td bgcolor='#95f78b'>{{recovered244}}</td><td bgcolor='#faa596'>{{deaths4}}</td><td bgcolor='#faa596'>{{deaths244}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state5}}</td><td bgcolor='#98f5ef'>{{confirmed5}}</td><td bgcolor='#98f5ef'>{{confirmed245}}</td><td bgcolor='#95f78b'>{{recovered5}}</td><td bgcolor='#95f78b'>{{recovered245}}</td><td bgcolor='#faa596'>{{deaths5}}</td><td bgcolor='#faa596'>{{deaths245}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state6}}</td><td bgcolor='#98f5ef'>{{confirmed6}}</td><td bgcolor='#98f5ef'>{{confirmed246}}</td><td bgcolor='#95f78b'>{{recovered6}}</td><td bgcolor='#95f78b'>{{recovered246}}</td><td bgcolor='#faa596'>{{deaths6}}</td><td bgcolor='#faa596'>{{deaths246}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state7}}</td><td bgcolor='#98f5ef'>{{confirmed7}}</td><td bgcolor='#98f5ef'>{{confirmed247}}</td><td bgcolor='#95f78b'>{{recovered7}}</td><td bgcolor='#95f78b'>{{recovered247}}</td><td bgcolor='#faa596'>{{deaths7}}</td><td bgcolor='#faa596'>{{deaths247}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state8}}</td><td bgcolor='#98f5ef'>{{confirmed8}}</td><td bgcolor='#98f5ef'>{{confirmed248}}</td><td bgcolor='#95f78b'>{{recovered8}}</td><td bgcolor='#95f78b'>{{recovered248}}</td><td bgcolor='#faa596'>{{deaths8}}</td><td bgcolor='#faa596'>{{deaths248}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state9}}</td><td bgcolor='#98f5ef'>{{confirmed9}}</td><td bgcolor='#98f5ef'>{{confirmed249}}</td><td bgcolor='#95f78b'>{{recovered9}}</td><td bgcolor='#95f78b'>{{recovered249}}</td><td bgcolor='#faa596'>{{deaths9}}</td><td bgcolor='#faa596'>{{deaths249}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state10}}</td><td bgcolor='#98f5ef'>{{confirmed10}}</td><td bgcolor='#98f5ef'>{{confirmed2410}}</td><td bgcolor='#95f78b'>{{recovered10}}</td><td bgcolor='#95f78b'>{{recovered2410}}</td><td bgcolor='#faa596'>{{deaths10}}</td><td bgcolor='#faa596'>{{deaths2410}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state11}}</td><td bgcolor='#98f5ef'>{{confirmed11}}</td><td bgcolor='#98f5ef'>{{confirmed2411}}</td><td bgcolor='#95f78b'>{{recovered11}}</td><td bgcolor='#95f78b'>{{recovered2411}}</td><td bgcolor='#faa596'>{{deaths11}}</td><td bgcolor='#faa596'>{{deaths2411}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state12}}</td><td bgcolor='#98f5ef'>{{confirmed12}}</td><td bgcolor='#98f5ef'>{{confirmed2412}}</td><td bgcolor='#95f78b'>{{recovered12}}</td><td bgcolor='#95f78b'>{{recovered2412}}</td><td bgcolor='#faa596'>{{deaths12}}</td><td bgcolor='#faa596'>{{deaths2412}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state13}}</td><td bgcolor='#98f5ef'>{{confirmed13}}</td><td bgcolor='#98f5ef'>{{confirmed2413}}</td><td bgcolor='#95f78b'>{{recovered13}}</td><td bgcolor='#95f78b'>{{recovered2413}}</td><td bgcolor='#faa596'>{{deaths13}}</td><td bgcolor='#faa596'>{{deaths2413}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state14}}</td><td bgcolor='#98f5ef'>{{confirmed14}}</td><td bgcolor='#98f5ef'>{{confirmed2414}}</td><td bgcolor='#95f78b'>{{recovered14}}</td><td bgcolor='#95f78b'>{{recovered2414}}</td><td bgcolor='#faa596'>{{deaths14}}</td><td bgcolor='#faa596'>{{deaths2414}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state15}}</td><td bgcolor='#98f5ef'>{{confirmed15}}</td><td bgcolor='#98f5ef'>{{confirmed2415}}</td><td bgcolor='#95f78b'>{{recovered15}}</td><td bgcolor='#95f78b'>{{recovered2415}}</td><td bgcolor='#faa596'>{{deaths15}}</td><td bgcolor='#faa596'>{{deaths2415}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state16}}</td><td bgcolor='#98f5ef'>{{confirmed16}}</td><td bgcolor='#98f5ef'>{{confirmed2416}}</td><td bgcolor='#95f78b'>{{recovered16}}</td><td bgcolor='#95f78b'>{{recovered2416}}</td><td bgcolor='#faa596'>{{deaths16}}</td><td bgcolor='#faa596'>{{deaths2416}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state17}}</td><td bgcolor='#98f5ef'>{{confirmed17}}</td><td bgcolor='#98f5ef'>{{confirmed2417}}</td><td bgcolor='#95f78b'>{{recovered17}}</td><td bgcolor='#95f78b'>{{recovered2417}}</td><td bgcolor='#faa596'>{{deaths17}}</td><td bgcolor='#faa596'>{{deaths2417}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state18}}</td><td bgcolor='#98f5ef'>{{confirmed18}}</td><td bgcolor='#98f5ef'>{{confirmed2418}}</td><td bgcolor='#95f78b'>{{recovered18}}</td><td bgcolor='#95f78b'>{{recovered2418}}</td><td bgcolor='#faa596'>{{deaths18}}</td><td bgcolor='#faa596'>{{deaths2418}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state19}}</td><td bgcolor='#98f5ef'>{{confirmed19}}</td><td bgcolor='#98f5ef'>{{confirmed2419}}</td><td bgcolor='#95f78b'>{{recovered19}}</td><td bgcolor='#95f78b'>{{recovered2419}}</td><td bgcolor='#faa596'>{{deaths19}}</td><td bgcolor='#faa596'>{{deaths2419}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state20}}</td><td bgcolor='#98f5ef'>{{confirmed20}}</td><td bgcolor='#98f5ef'>{{confirmed2420}}</td><td bgcolor='#95f78b'>{{recovered20}}</td><td bgcolor='#95f78b'>{{recovered2420}}</td><td bgcolor='#faa596'>{{deaths20}}</td><td bgcolor='#faa596'>{{deaths2420}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state21}}</td><td bgcolor='#98f5ef'>{{confirmed21}}</td><td bgcolor='#98f5ef'>{{confirmed2421}}</td><td bgcolor='#95f78b'>{{recovered21}}</td><td bgcolor='#95f78b'>{{recovered2421}}</td><td bgcolor='#faa596'>{{deaths21}}</td><td bgcolor='#faa596'>{{deaths2421}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state22}}</td><td bgcolor='#98f5ef'>{{confirmed22}}</td><td bgcolor='#98f5ef'>{{confirmed2422}}</td><td bgcolor='#95f78b'>{{recovered22}}</td><td bgcolor='#95f78b'>{{recovered2422}}</td><td bgcolor='#faa596'>{{deaths22}}</td><td bgcolor='#faa596'>{{deaths2422}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state23}}</td><td bgcolor='#98f5ef'>{{confirmed23}}</td><td bgcolor='#98f5ef'>{{confirmed2423}}</td><td bgcolor='#95f78b'>{{recovered23}}</td><td bgcolor='#95f78b'>{{recovered2423}}</td><td bgcolor='#faa596'>{{deaths23}}</td><td bgcolor='#faa596'>{{deaths2423}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state24}}</td><td bgcolor='#98f5ef'>{{confirmed24}}</td><td bgcolor='#98f5ef'>{{confirmed2424}}</td><td bgcolor='#95f78b'>{{recovered24}}</td><td bgcolor='#95f78b'>{{recovered2424}}</td><td bgcolor='#faa596'>{{deaths24}}</td><td bgcolor='#faa596'>{{deaths2424}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state25}}</td><td bgcolor='#98f5ef'>{{confirmed25}}</td><td bgcolor='#98f5ef'>{{confirmed2425}}</td><td bgcolor='#95f78b'>{{recovered25}}</td><td bgcolor='#95f78b'>{{recovered2425}}</td><td bgcolor='#faa596'>{{deaths25}}</td><td bgcolor='#faa596'>{{deaths2425}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state26}}</td><td bgcolor='#98f5ef'>{{confirmed26}}</td><td bgcolor='#98f5ef'>{{confirmed2426}}</td><td bgcolor='#95f78b'>{{recovered26}}</td><td bgcolor='#95f78b'>{{recovered2426}}</td><td bgcolor='#faa596'>{{deaths26}}</td><td bgcolor='#faa596'>{{deaths2426}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state27}}</td><td bgcolor='#98f5ef'>{{confirmed27}}</td><td bgcolor='#98f5ef'>{{confirmed2427}}</td><td bgcolor='#95f78b'>{{recovered27}}</td><td bgcolor='#95f78b'>{{recovered2427}}</td><td bgcolor='#faa596'>{{deaths27}}</td><td bgcolor='#faa596'>{{deaths2427}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state28}}</td><td bgcolor='#98f5ef'>{{confirmed28}}</td><td bgcolor='#98f5ef'>{{confirmed2428}}</td><td bgcolor='#95f78b'>{{recovered28}}</td><td bgcolor='#95f78b'>{{recovered2428}}</td><td bgcolor='#faa596'>{{deaths28}}</td><td bgcolor='#faa596'>{{deaths2428}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state29}}</td><td bgcolor='#98f5ef'>{{confirmed29}}</td><td bgcolor='#98f5ef'>{{confirmed2429}}</td><td bgcolor='#95f78b'>{{recovered29}}</td><td bgcolor='#95f78b'>{{recovered2429}}</td><td bgcolor='#faa596'>{{deaths29}}</td><td bgcolor='#faa596'>{{deaths2429}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state30}}</td><td bgcolor='#98f5ef'>{{confirmed30}}</td><td bgcolor='#98f5ef'>{{confirmed2430}}</td><td bgcolor='#95f78b'>{{recovered30}}</td><td bgcolor='#95f78b'>{{recovered2430}}</td><td bgcolor='#faa596'>{{deaths30}}</td><td bgcolor='#faa596'>{{deaths2430}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state31}}</td><td bgcolor='#98f5ef'>{{confirmed31}}</td><td bgcolor='#98f5ef'>{{confirmed2431}}</td><td bgcolor='#95f78b'>{{recovered31}}</td><td bgcolor='#95f78b'>{{recovered2431}}</td><td bgcolor='#faa596'>{{deaths31}}</td><td bgcolor='#faa596'>{{deaths2431}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state32}}</td><td bgcolor='#98f5ef'>{{confirmed32}}</td><td bgcolor='#98f5ef'>{{confirmed2432}}</td><td bgcolor='#95f78b'>{{recovered32}}</td><td bgcolor='#95f78b'>{{recovered2432}}</td><td bgcolor='#faa596'>{{deaths32}}</td><td bgcolor='#faa596'>{{deaths2432}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state33}}</td><td bgcolor='#98f5ef'>{{confirmed33}}</td><td bgcolor='#98f5ef'>{{confirmed2433}}</td><td bgcolor='#95f78b'>{{recovered33}}</td><td bgcolor='#95f78b'>{{recovered2433}}</td><td bgcolor='#faa596'>{{deaths33}}</td><td bgcolor='#faa596'>{{deaths2433}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state34}}</td><td bgcolor='#98f5ef'>{{confirmed34}}</td><td bgcolor='#98f5ef'>{{confirmed2434}}</td><td bgcolor='#95f78b'>{{recovered34}}</td><td bgcolor='#95f78b'>{{recovered2434}}</td><td bgcolor='#faa596'>{{deaths34}}</td><td bgcolor='#faa596'>{{deaths2434}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state35}}</td><td bgcolor='#98f5ef'>{{confirmed35}}</td><td bgcolor='#98f5ef'>{{confirmed2435}}</td><td bgcolor='#95f78b'>{{recovered35}}</td><td bgcolor='#95f78b'>{{recovered2435}}</td><td bgcolor='#faa596'>{{deaths35}}</td><td bgcolor='#faa596'>{{deaths2435}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state36}}</td><td bgcolor='#98f5ef'>{{confirmed36}}</td><td bgcolor='#98f5ef'>{{confirmed2436}}</td><td bgcolor='#95f78b'>{{recovered36}}</td><td bgcolor='#95f78b'>{{recovered2436}}</td><td bgcolor='#faa596'>{{deaths36}}</td><td bgcolor='#faa596'>{{deaths2436}}</td></tr>
+   <tr><td style="font-weight: bold;">{{state37}}</td><td bgcolor='#98f5ef'>{{confirmed37}}</td><td bgcolor='#98f5ef'>{{confirmed2437}}</td><td bgcolor='#95f78b'>{{recovered37}}</td><td bgcolor='#95f78b'>{{recovered2437}}</td><td bgcolor='#faa596'>{{deaths37}}</td><td bgcolor='#faa596'>{{deaths2437}}</td></tr>
 
-<table class="tableizer-table" id="myTable">
-  <thead><tr class="tableizer-firstrow"><th>State or Unioin Territory</th><th>Confirmed cases till date</th><th>Confirmed cases since last update</th><th>Recoveries till date</th><th>Recoveries since last update</th><th>Deaths till date</th><th>Deaths since last update</th></tr></thead><tbody>
- <tr><td>Andaman and Nicobar Islands</td><td>{{confirmedan}}</td><td>{{confirmed24an}}</td><td>{{recoveredan}}</td><td>{{recovered24an}}</td><td>{{deathsan}}</td><td>{{deaths24an}}</td></tr>
- <tr><td>Andhra Pradesh</td><td>{{confirmedap}}</td><td>{{confirmed24ap}}</td><td>{{recoveredap}}</td><td>{{recovered24ap}}</td><td>{{deathsap}}</td><td>{{deaths24ap}}</td></tr>
- <tr><td>Arunachal Pradesh</td><td>{{confirmedar}}</td><td>{{confirmed24ar}}</td><td>{{recoveredar}}</td><td>{{recovered24ar}}</td><td>{{deathsar}}</td><td>{{deaths24ar}}</td></tr>
- <tr><td>Assam</td><td>{{confirmedas}}</td><td>{{confirmed24as}}</td><td>{{recoveredas}}</td><td>{{recovered24as}}</td><td>{{deathsas}}</td><td>{{deaths24as}}</td></tr>
- <tr><td>Bihar</td><td>{{confirmedbr}}</td><td>{{confirmed24br}}</td><td>{{recoveredbr}}</td><td>{{recovered24br}}</td><td>{{deathsbr}}</td><td>{{deaths24br}}</td></tr>
- <tr><td>Chandigarh</td><td>{{confirmedch}}</td><td>{{confirmed24ch}}</td><td>{{recoveredch}}</td><td>{{recovered24ch}}</td><td>{{deathsch}}</td><td>{{deaths24ch}}</td></tr>
- <tr><td>Chhattisgarh</td><td>{{confirmedchh}}</td><td>{{confirmed24chh}}</td><td>{{recoveredchh}}</td><td>{{recovered24chh}}</td><td>{{deathschh}}</td><td>{{deaths24chh}}</td></tr>
- <tr><td>Dadra and Nagar Haveli and Daman and Diu</td><td>{{confirmeddnhdd}}</td><td>{{confirmed24dnhdd}}</td><td>{{recovereddnhdd}}</td><td>{{recovered24dnhdd}}</td><td>{{deathsdnhdd}}</td><td>{{deaths24dnhdd}}</td></tr>
- <tr><td>Delhi</td><td>{{confirmeddl}}</td><td>{{confirmed24dl}}</td><td>{{recovereddl}}</td><td>{{recovered24dl}}</td><td>{{deathsdl}}</td><td>{{deaths24dl}}</td></tr>
- <tr><td>Goa</td><td>{{confirmedgoa}}</td><td>{{confirmed24goa}}</td><td>{{recoveredgoa}}</td><td>{{recovered24goa}}</td><td>{{deathsgoa}}</td><td>{{deaths24goa}}</td></tr>
- <tr><td>Gujarat</td><td>{{confirmedgj}}</td><td>{{confirmed24gj}}</td><td>{{recoveredgj}}</td><td>{{recovered24gj}}</td><td>{{deathsgj}}</td><td>{{deaths24gj}}</td></tr>
- <tr><td>Haryana</td><td>{{confirmedhr}}</td><td>{{confirmed24hr}}</td><td>{{recoveredhr}}</td><td>{{recovered24hr}}</td><td>{{deathshr}}</td><td>{{deaths24hr}}</td></tr>
- <tr><td>Himachal Pradesh</td><td>{{confirmedhp}}</td><td>{{confirmed24hp}}</td><td>{{recoveredhp}}</td><td>{{recovered24hp}}</td><td>{{deathshp}}</td><td>{{deaths24hp}}</td></tr>
- <tr><td>Jammu and Kashmir</td><td>{{confirmedjk}}</td><td>{{confirmed24jk}}</td><td>{{recoveredjk}}</td><td>{{recovered24jk}}</td><td>{{deathsjk}}</td><td>{{deaths24jk}}</td></tr>
- <tr><td>Jharkhand</td><td>{{confirmedjr}}</td><td>{{confirmed24jr}}</td><td>{{recoveredjr}}</td><td>{{recovered24jr}}</td><td>{{deathsjr}}</td><td>{{deaths24jr}}</td></tr>
- <tr><td>Karnataka</td><td>{{confirmedka}}</td><td>{{confirmed24ka}}</td><td>{{recoveredka}}</td><td>{{recovered24ka}}</td><td>{{deathska}}</td><td>{{deaths24ka}}</td></tr>
- <tr><td>Kerala</td><td>{{confirmedkl}}</td><td>{{confirmed24kl}}</td><td>{{recoveredkl}}</td><td>{{recovered24kl}}</td><td>{{deathskl}}</td><td>{{deaths24kl}}</td></tr>
- <tr><td>Ladakh</td><td>{{confirmedlh}}</td><td>{{confirmed24lh}}</td><td>{{recoveredlh}}</td><td>{{recovered24lh}}</td><td>{{deathslh}}</td><td>{{deaths24lh}}</td></tr>
- <tr><td>Lakshadweep</td><td>{{confirmedld}}</td><td>{{confirmed24ld}}</td><td>{{recoveredld}}</td><td>{{recovered24ld}}</td><td>{{deathsld}}</td><td>{{deaths24ld}}</td></tr>
- <tr><td>Madhya Pradesh</td><td>{{confirmedmp}}</td><td>{{confirmed24mp}}</td><td>{{recoveredmp}}</td><td>{{recovered24mp}}</td><td>{{deathsmp}}</td><td>{{deaths24mp}}</td></tr>
- <tr><td>Maharashtra</td><td>{{confirmedmh}}</td><td>{{confirmed24mh}}</td><td>{{recoveredmh}}</td><td>{{recovered24mh}}</td><td>{{deathsmh}}</td><td>{{deaths24mh}}</td></tr>
- <tr><td>Manipur</td><td>{{confirmedmn}}</td><td>{{confirmed24mn}}</td><td>{{recoveredmn}}</td><td>{{recovered24mn}}</td><td>{{deathsmn}}</td><td>{{deaths24mn}}</td></tr>
- <tr><td>Meghalaya</td><td>{{confirmedmg}}</td><td>{{confirmed24mg}}</td><td>{{recoveredmg}}</td><td>{{recovered24mg}}</td><td>{{deathsmg}}</td><td>{{deaths24mg}}</td></tr>
- <tr><td>Mizoram</td><td>{{confirmedmz}}</td><td>{{confirmed24mz}}</td><td>{{recoveredmz}}</td><td>{{recovered24mz}}</td><td>{{deathsmz}}</td><td>{{deaths24mz}}</td></tr>
- <tr><td>Nagaland</td><td>{{confirmedng}}</td><td>{{confirmed24ng}}</td><td>{{recoveredng}}</td><td>{{recovered24ng}}</td><td>{{deathsng}}</td><td>{{deaths24ng}}</td></tr>
- <tr><td>Odisha</td><td>{{confirmedor}}</td><td>{{confirmed24or}}</td><td>{{recoveredor}}</td><td>{{recovered24or}}</td><td>{{deathsor}}</td><td>{{deaths24or}}</td></tr>
- <tr><td>Puducherry</td><td>{{confirmedpy}}</td><td>{{confirmed24py}}</td><td>{{recoveredpy}}</td><td>{{recovered24py}}</td><td>{{deathspy}}</td><td>{{deaths24py}}</td></tr>
- <tr><td>Punjab</td><td>{{confirmedpb}}</td><td>{{confirmed24pb}}</td><td>{{recoveredpb}}</td><td>{{recovered24pb}}</td><td>{{deathspb}}</td><td>{{deaths24pb}}</td></tr>
- <tr><td>Rajasthan</td><td>{{confirmedrj}}</td><td>{{confirmed24rj}}</td><td>{{recoveredrj}}</td><td>{{recovered24rj}}</td><td>{{deathsrj}}</td><td>{{deaths24rj}}</td></tr>
- <tr><td>Sikkim</td><td>{{confirmedsk}}</td><td>{{confirmed24sk}}</td><td>{{recoveredsk}}</td><td>{{recovered24sk}}</td><td>{{deathssk}}</td><td>{{deaths24sk}}</td></tr>
- <tr><td>State Unknown</td><td>{{confirmedsu}}</td><td>{{confirmed24su}}</td><td>{{recoveredsu}}</td><td>{{recovered24su}}</td><td>{{deathssu}}</td><td>{{deaths24su}}</td></tr>
- <tr><td>Tamil Nadu</td><td>{{confirmedtn}}</td><td>{{confirmed24tn}}</td><td>{{recoveredtn}}</td><td>{{recovered24tn}}</td><td>{{deathstn}}</td><td>{{deaths24tn}}</td></tr>
- <tr><td>Telangana</td><td>{{confirmedts}}</td><td>{{confirmed24ts}}</td><td>{{recoveredts}}</td><td>{{recovered24ts}}</td><td>{{deathsts}}</td><td>{{deaths24ts}}</td></tr>
- <tr><td>Tripura</td><td>{{confirmedtr}}</td><td>{{confirmed24tr}}</td><td>{{recoveredtr}}</td><td>{{recovered24tr}}</td><td>{{deathstr}}</td><td>{{deaths24tr}}</td></tr>
- <tr><td>Uttar Pradesh</td><td>{{confirmedup}}</td><td>{{confirmed24up}}</td><td>{{recoveredup}}</td><td>{{recovered24up}}</td><td>{{deathsup}}</td><td>{{deaths24up}}</td></tr>
- <tr><td>Uttarakhand</td><td>{{confirmeduk}}</td><td>{{confirmed24uk}}</td><td>{{recovereduk}}</td><td>{{recovered24uk}}</td><td>{{deathsuk}}</td><td>{{deaths24uk}}</td></tr>
- <tr><td>West Bengal</td><td>{{confirmedwb}}</td><td>{{confirmed24wb}}</td><td>{{recoveredwb}}</td><td>{{recovered24wb}}</td><td>{{deathswb}}</td><td>{{deaths24wb}}</td></tr>
 </tbody></table>
 <script>
 function myFunction() {
@@ -227,14 +301,86 @@ function myFunction() {
 }
 </script> <br>
 <p align = 'center'><a href="https://mohfw.gov.in/" target="_blank" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Visit the Ministry of Health
-and Family Welfare Website for other details</a></p>
+and Family Welfare Website for other details</a> <br>
+ <br> <marquee behavior="scroll" direction="left"><strong>Numbers in this website might not "always" match with that in the MoHFW - GOI website. This website pulls data from multiple sources which are being updated in realtime. Variations in data indicate "recent updates" in numbers as of ({{update}} IST) which might or might not have been reflected in the MoHFW website parallely.</strong></marquee>
 
-<br><br><br><br>  <hr> <footer class="text-muted">
+</p>
+</div>
+<br><br>
+<div class='container'>
+<h4 align = 'center'><strong>WORLDWIDE COVID19 SITUATION</strong></h4> <br>
+<iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe>
 
-  <marquee behavior="scroll" direction="left"><strong>Data sources : | arogya.maharashtra.gov.in | | assam.gov.in | | cghealth.nic.in | | chdcovid19.in | | collectorate.py.gov.in | | covid.icmr.org.in | | covid.ladakh.gov.in | | covid19.itanagarsmartcity.in | | covid19.karnataka.gov.in | | covid19.telangana.gov.in | | dashboard.kerala.gov.in | | delhifightscorona.in | | dhs.kerala.gov.in | | dronamaps.com | | facebook.com | | goa.gov.in | | gujcovid19.gujarat.gov.in | | health.mizoram.gov.in | | health.odisha.gov.in | | health.uk.gov.in | | hmfw.ap.gov.in | | icmr.nic.in | | karunadu.karnataka.gov.in | | mahe.gov.in | | meghalayaonline.gov.in | | mobile.twitter.com | | mohfw.gov.in | | mphealthresponse.nhmmp.gov.in | | mpinfo.org | | nhmharyana.gov.in | | nrhmhp.gov.in | | nrhmmanipur.org | | pbhealth.gov.in | | phdmah.maps.arcgis.com | | rajswasthya.nic.in | | stopcoronatn.in | | twitter.com | | wbhealth.gov.in |</strong></marquee>
-       <div class="container text-center">
-         <p>&copy;IndraneelChakraborty | {% now "Y" %} </p>
+<br><br>
+</div></div></div>
+<marquee behavior="scroll" direction="left"><strong>"The information and video links are solely meant to spread awareness and uplift the spirit of many who are feeling down,
+de-motivated, depressed, confused and helpless in this global crisis. This has not been done under any sort of external influence or funding or sponsorship or whatsoever. This whole website is an
+individual effort. Stay safe, take care :)" - Indraneel Chakraborty </strong></marquee>
+
+<br><br>
+
+
+
+
+<style>
+
+
+.navbar1 {
+  overflow: hidden;
+  background-color: #000;
+
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar1 a {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar1 a:hover {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar1 a.active {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+</div></div></div>
+
+
+
+<div class="navbar1">
+    <a  href="https://indraneel.pythonanywhere.com/">INDIA FIGHTS COVID19</a>
+     <a  href="https://indraneel.pythonanywhere.com/about/">About COVID19</a>
+      <a  href="https://indraneel.pythonanywhere.com/helpline/" target="">Helplines</a>
+      <a  href="https://indraneel.pythonanywhere.com/resources/" target="">Resources</a>
+      <a href="https://forms.gle/imu5E53nfg7ntuAX7" target="_blank">Feedback</a>
+
+</div>
+
+</div></div></div>
+
+
+<hr> <footer class="text-muted">
+
+<marquee behavior="scroll" direction="left"><strong>Data sources :  | <a href="http://www.arogya.maharashtra.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">arogya.maharashtra.gov.in  </a> | | <a href="http://www.assam.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">assam.gov.in  </a> | | <a href="http://www.cghealth.nic.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">cghealth.nic.in  </a> | | <a href="http://www.chdcovid19.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">chdcovid19.in  </a> | | <a href="http://www.collectorate.py.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">collectorate.py.gov.in  </a> | | <a href="http://www.covid.icmr.org.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">covid.icmr.org.in  </a> | | <a href="http://www.covid.ladakh.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">covid.ladakh.gov.in  </a> | | <a href="http://www.covid19.itanagarsmartcity.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">covid19.itanagarsmartcity.in  </a> | | <a href="http://www.covid19.karnataka.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">covid19.karnataka.gov.in  </a> | | <a href="http://www.covid19.telangana.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">covid19.telangana.gov.in  </a> | | <a href="http://www.dashboard.kerala.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">dashboard.kerala.gov.in  </a> | | <a href="http://www.delhifightscorona.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">delhifightscorona.in  </a> | | <a href="http://www.dhs.kerala.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">dhs.kerala.gov.in  </a> | | <a href="http://www.dronamaps.com   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">dronamaps.com  </a> | | <a href="http://www.facebook.com   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">facebook.com  </a> | | <a href="http://www.goa.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">goa.gov.in  </a> | | <a href="http://www.gujcovid19.gujarat.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">gujcovid19.gujarat.gov.in  </a> | | <a href="http://www.health.mizoram.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">health.mizoram.gov.in  </a> | | <a href="http://www.health.odisha.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">health.odisha.gov.in  </a> | | <a href="http://www.health.uk.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">health.uk.gov.in  </a> | | <a href="http://www.hmfw.ap.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">hmfw.ap.gov.in  </a> | | <a href="http://www.icmr.nic.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">icmr.nic.in  </a> | | <a href="http://www.karunadu.karnataka.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">karunadu.karnataka.gov.in  </a> | | <a href="http://www.mahe.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">mahe.gov.in  </a> | | <a href="http://www.meghalayaonline.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">meghalayaonline.gov.in  </a> | | <a href="http://www.mobile.twitter.com   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">mobile.twitter.com  </a> | | <a href="http://www.mohfw.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">mohfw.gov.in  </a> | | <a href="http://www.mphealthresponse.nhmmp.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">mphealthresponse.nhmmp.gov.in  </a> | | <a href="http://www.mpinfo.org   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">mpinfo.org  </a> | | <a href="http://www.nhmharyana.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">nhmharyana.gov.in  </a> | | <a href="http://www.nrhmhp.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">nrhmhp.gov.in  </a> | | <a href="http://www.nrhmmanipur.org   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">nrhmmanipur.org  </a> | | <a href="http://www.pbhealth.gov.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">pbhealth.gov.in  </a> | | <a href="http://www.phdmah.maps.arcgis.com   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">phdmah.maps.arcgis.com  </a> | | <a href="http://www.rajswasthya.nic.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">rajswasthya.nic.in  </a> | | <a href="http://www.stopcoronatn.in   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">stopcoronatn.in  </a> | | <a href="http://www.twitter.com   "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">twitter.com  </a> | | <a href="http://www.wbhealth.gov.in "class=btn btn-warning btn-lg active" role="button" aria-pressed="true">wbhealth.gov.in</a> | </strong></marquee>
+<p align = 'center'>&copy;IndraneelChakraborty | {% now "Y" %} <br><a href="https://twitter.com/ineelhere?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ineelhere</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
          </div>
+         <p align='center'>Visitor Count : <script type="text/javascript" src="//counter.websiteout.net/js/20/6/0/0"></script></p>
      </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
