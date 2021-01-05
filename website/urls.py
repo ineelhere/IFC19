@@ -21,6 +21,8 @@ urlpatterns = [
     path('ghugniislove/', admin.site.urls),
     path('', views.home),
     path('home', views.home),
-    
-    path('helpline/', views.helpline)
+
+    path('helpline/', views.helpline),
+    path('about/', views.about),
+    path('resources/',views.resources),
 ]
