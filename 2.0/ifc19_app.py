@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-st.markdown("![](https://komarev.com/ghpvc/?username=ineelhere&color=blue)")
+st.markdown("![](https://komarev.com/ghpvc/?username=ineelhere&label=VISITOR+COUNTS)")
 st.title("India Fights COVID19 (IFC19)")
 st.markdown("""
 webapp version 2.0 | development under progress
