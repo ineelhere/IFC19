@@ -13,5 +13,6 @@ st.write(df)
 
 st.markdown("""
 <hr>
-© Indraneel Chakraborty | 2021
+
+**© Indraneel Chakraborty | 2021**
 """)
