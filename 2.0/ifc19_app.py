@@ -5,11 +5,18 @@ import pytz
 from state_wise import *
 
 st.sidebar.subheader("Look out here for more COVID related information")
-# st.markdown("![](https://komarev.com/ghpvc/?username=ineelhere&label=VISITOR+COUNTS)")
+st.sidebar.markdown("""
+* Data Source - https://data.covid19india.org/
+* Source Codes - https://github.com/ineelhere/IFC19/tree/master/2.0
+* Feedback - https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform
+
+""")
+
+# st.markdown("")
 st.title("India Fights COVID19 (IFC19)")
 
 st.markdown("""
-webapp version 2.0 | 💻 **development under progress** 💻
+webapp version 2.0 | 💻 development under progress 💻
 """)
 
 IST = pytz.timezone('Asia/Kolkata') 
