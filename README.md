@@ -10,6 +10,7 @@ The old website (https://indraneel.pythonanywhere.com/) is now deprecated and al
 The Streamlit hosted app is available at https://share.streamlit.io/ineelhere/ifc19/2.0/ifc19_app.py
 
 <hr>
+
 ### 👉👉 IFC19 webapp version 1.0 | May 2020
 With a background in Biotechnology and Bioinformatics, I wanted to expand my knowledge and skillsets in data science programming and web development. While I was self-learning my way out, I was inspired by the several COVID19 dashboards that were coming up from several sources worldwide. So, I thought of creating a similar website myself as a part of the learning process and here is the result!
 
