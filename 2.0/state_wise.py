@@ -1,26 +1,11 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-
+import datetime
 
 def state_wise():
-    df_daily = pd.read_csv("https://api.covid19india.org/csv/latest/states.csv")
-    df_daily["Date"] = pd.to_datetime(df_daily.Date)
-    df_daily["Date"] = df_daily["Date"].dt.strftime('%d %B %Y')
-    df_daily = df_daily.sort_index(ascending=False)
-    df_india_daily = df_daily.loc[df_daily["State"]=="India"]
-    total = len(df_india_daily)
-    slider_ph = st.empty()
-    value = slider_ph.slider("Move the slider to list data for the last 'n' number of days", 1, total, 7, 1)
-    st.dataframe((df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].head(value)).set_index(["Date"]))
-    
-
-
-
-
-    # df = pd.read_csv("https://api.covid19india.org/csv/latest/state_wise.csv")
-    # st.write(f"**State wise data - Total Numbers till Date since outbreak**")
-    # df_temp = df[df.State!="Total"][["State", "Confirmed", "Recovered", "Deaths",	"Active"]]
-    # df_temp = df_temp.set_index("State")
-    # st.dataframe(df_temp)
-    # st.bar_chart(df_temp)
+    df = pd.read_csv("https://api.covid19india.org/csv/latest/states.csv")
+    df_all = df.loc[df["Date"]==df.Date[len(df)-1]]
+    df_all = df_all.loc[df.State!="India"]
+    df_all = df_all[["State", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True) 
+    st.write(f"**Numbers in the Indian States as of `{datetime.datetime.strptime(df.Date[len(df)-1], '%Y-%m-%d').strftime('%d %B %Y')}`**")
+    st.dataframe(df_all.set_index("State"))
