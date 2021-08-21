@@ -7,15 +7,42 @@ from state_wise import *
 from info import *
 from last24hrs import *
 
-st.sidebar.subheader("Look out here for more COVID related information")
+st.sidebar.subheader("About the webapp")
 st.sidebar.markdown("""
 * [API Source](https://data.covid19india.org/)
 * [Source Codes](https://github.com/ineelhere/IFC19/tree/master/2.0)
 * [Feedback](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)
 
+### 👋👋 IFC19 webapp version 2.0 is here! | August 2021 
+ICF19 no longer uses the Django framework. It now runs on Streamlit - an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science.
+
+- [The old website](https://indraneel.pythonanywhere.com/) is now deprecated and redirects users to visit this new version.
+- The Streamlit hosted app is available [here](https://share.streamlit.io/ineelhere/ifc19/2.0/ifc19_app.py)
+
+___
+
+### 👉👉 IFC19 webapp version 1.0 | May 2020 
+*`currently deprecated`*  \n
+With a background in Biotechnology and Bioinformatics, I wanted to expand my knowledge and skillsets in data science programming and web development. While I was self-learning my way out, I was inspired by the several COVID19 dashboards that were coming up from several sources worldwide. So, I thought of creating a similar website myself as a part of the learning process and here is the result!
+
+The data is being pulled from the crowdsourced API provided by the covid19india.org. The relevant data is then cleaned up and processed using python. The results are then presented on the website using Django framework.
+
+So, long story short — I have created a website that displays real-time data and statistics along with other information regarding the COVID19 situation in India. This project is fully a personal endeavor. It has not been done under any sort of external influence or funding or sponsorship. Please visit the website and provide feedback on the same.
+
+___
+**© [Indraneel Chakraborty](https://www.linkedin.com/in/indraneelchakraborty/) | 2021 **
 """)
 
-# st.markdown("")
+html_text = """
+<a href="https://www.linkedin.com/in/indraneelchakraborty/" target="_blank"><img src="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" alt="Linkedin" width="22" height="22"> </a>
+                <a href="https://sites.google.com/view/indraneelchakraborty" target="_blank"><img width="22" height="22" src="https://lh3.googleusercontent.com/mjVS_Izc6fGAvuaT0v--gb2so5mZvAbI5EUMUB41cWB7tpy81trBCR8rIlj8NoKgPzDWGN-Hs97NlW0T9W57YJ5z9A8QQWwXUYa_Zg=h120" alt="Google Sites"> </a>
+                <a href="https://twitter.com/ineelhere" target="_blank"> <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter" width="22" height="22"> </a>
+                <a href="https://www.youtube.com/channel/UCbIMzl7rOj0FkamVf_aBM8w" target="_blank"> <img src="https://www.youtube.com/s/desktop/28b67e7f/img/favicon_48.png" alt="YouTube" width="22" height="22"> </a>
+                <a href="https://github.com/ineelhere" target="_blank"><img width="22" height="22" src="https://github.com/fluidicon.png" alt="Github"> </a>
+
+"""
+st.sidebar.markdown(html_text, unsafe_allow_html=True)
+
 st.markdown("""# India ![](https://img.icons8.com/fluency/50/000000/india-map.png) Fights COVID19 (IFC19)""")
 
 st.markdown("""
@@ -50,6 +77,7 @@ else:
 response = st.button("List the Data Sources (Websites)")
 if response:
     resources()
+
 
 st.markdown("""
 ___
