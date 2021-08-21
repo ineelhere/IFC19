@@ -12,23 +12,16 @@ st.sidebar.markdown("""
 * [API Source](https://data.covid19india.org/)
 * [Source Codes](https://github.com/ineelhere/IFC19/tree/master/2.0)
 * [Feedback](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)
-
 ### 👋👋 IFC19 webapp version 2.0 is here! | August 2021 
 ICF19 no longer uses the Django framework. It now runs on Streamlit - an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science.
-
 - [The old website](https://indraneel.pythonanywhere.com/) is now deprecated and redirects users to visit this new version.
 - The Streamlit hosted app is available [here](https://share.streamlit.io/ineelhere/ifc19/2.0/ifc19_app.py)
-
 ___
-
 ### 👉👉 IFC19 webapp version 1.0 | May 2020 
 *`currently deprecated`*  \n
 With a background in Biotechnology and Bioinformatics, I wanted to expand my knowledge and skillsets in data science programming and web development. While I was self-learning my way out, I was inspired by the several COVID19 dashboards that were coming up from several sources worldwide. So, I thought of creating a similar website myself as a part of the learning process and here is the result!
-
 The data is being pulled from the crowdsourced API provided by the covid19india.org. The relevant data is then cleaned up and processed using python. The results are then presented on the website using Django framework.
-
 So, long story short — I have created a website that displays real-time data and statistics along with other information regarding the COVID19 situation in India. This project is fully a personal endeavor. It has not been done under any sort of external influence or funding or sponsorship. Please visit the website and provide feedback on the same.
-
 ___
 **© [Indraneel Chakraborty](https://www.linkedin.com/in/indraneelchakraborty/) | 2021 **
 """)
@@ -39,7 +32,6 @@ html_text = """
                 <a href="https://twitter.com/ineelhere" target="_blank"> <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter" width="22" height="22"> </a>
                 <a href="https://www.youtube.com/channel/UCbIMzl7rOj0FkamVf_aBM8w" target="_blank"> <img src="https://www.youtube.com/s/desktop/28b67e7f/img/favicon_48.png" alt="YouTube" width="22" height="22"> </a>
                 <a href="https://github.com/ineelhere" target="_blank"><img width="22" height="22" src="https://github.com/fluidicon.png" alt="Github"> </a>
-
 """
 st.sidebar.markdown(html_text, unsafe_allow_html=True)
 
@@ -67,12 +59,15 @@ st.info(f'Currently **Active** cases in India: **{df_india_daily[["Date", "Confi
 st.success(f'**Recoveries** till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Recovered"][0]}**  \n**Recoveries** in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Recovered"][0]}**')
 st.error(f'**Loss** of life till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Deceased"][0]}**  \n**Loss** of life in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Deceased"][0]}**')
 
-mode = st.radio("", ["Show cumulative stats till date since outbreak", "Show stats for cases per day"])
+mode = st.radio("", ["Show cumulative stats till date since outbreak", "Show stats for cases per day", "Show stats on COVID19 vaccination in India"])
 if mode == "Show cumulative stats till date since outbreak":
     all_india()
     state_wise()
-else:
+if mode ==  "Show stats for cases per day" :
     last24hrs()
+if mode == "Show stats on COVID19 vaccination in India":
+    st.info("This section will be available soon!")
+
 
 response = st.button("List the Data Sources (Websites)")
 if response:
@@ -90,10 +85,8 @@ html_text = """
                 <a href="https://twitter.com/ineelhere" target="_blank"> <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter" width="22" height="22"> </a>
                 <a href="https://www.youtube.com/channel/UCbIMzl7rOj0FkamVf_aBM8w" target="_blank"> <img src="https://www.youtube.com/s/desktop/28b67e7f/img/favicon_48.png" alt="YouTube" width="22" height="22"> </a>
                 <a href="https://github.com/ineelhere" target="_blank"><img width="22" height="22" src="https://github.com/fluidicon.png" alt="Github"> </a>
-
 """
 st.markdown(html_text, unsafe_allow_html=True)
 st.write("*[Collaborations](https://github.com/ineelhere/IFC19/tree/master/2.0) are welcome*")
 st.write("**[Let me know your thoughts on this webapp!](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)**")
-st.info("** 👨‍💻 App development under progress. New features coming soon!**")
-
+st.info("** 👨‍💻 App development in progress. New features coming soon!**")
