@@ -35,9 +35,10 @@ df_india_24hrs = (df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]]
 df_india_24hrs = df_india_24hrs.set_index("Date").diff()
 df_india_24hrs = df_india_24hrs.iloc[::-1]
 
-st.warning(f'Confirmed cases till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Confirmed"][0]}**  \nConfirmed cases in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Confirmed"][0]}**')
-st.success(f'Recoveries till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Recovered"][0]}**  \nRecoveries in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Recovered"][0]}**')
-st.error(f'Loss of life till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Deceased"][0]}**  \nLoss of life in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Deceased"][0]}**')
+st.warning(f'**Confirmed** cases till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Confirmed"][0]}**  \n**Confirmed** cases in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Confirmed"][0]}**')
+st.info(f'Currently **Active** cases **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Confirmed"][0]-df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Recovered"][0]-df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Deceased"][0]-df_india_daily.head(1).reset_index()["Other"][0]}**')
+st.success(f'**Recoveries** till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Recovered"][0]}**  \n**Recoveries** in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Recovered"][0]}**')
+st.error(f'**Loss** of life till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Deceased"][0]}**  \n**Loss** of life in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Deceased"][0]}**')
 
 mode = st.radio("", ["Show cumulative stats till date since outbreak", "Show stats for cases per day"])
 if mode == "Show cumulative stats till date since outbreak":
