@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import base64
-
+import plotly.express as px
 
 def all_india():
     df_daily = pd.read_csv("https://api.covid19india.org/csv/latest/states.csv")
@@ -18,3 +18,8 @@ def all_india():
     b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'<a href="data:file/csv;base64,{b64}">Download the above as a CSV File</a> (right-click and save as &lt;some_name&gt;.csv)'
     st.markdown(href, unsafe_allow_html=True)
+    df_india_daily = df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]]
+    df_india_daily = df_india_daily.sort_values("Confirmed")
+    df_long=pd.melt(df_india_daily, id_vars=['Date'], value_vars=["Confirmed", "Recovered", "Deceased"])
+    fig = px.line(df_long, x='Date', y='value', color='variable')
+    st.plotly_chart(fig, use_container_width=True)
