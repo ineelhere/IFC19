@@ -93,6 +93,7 @@ html_text = """
 
 """
 st.markdown(html_text, unsafe_allow_html=True)
+st.write("*[Collaborations](https://github.com/ineelhere/IFC19/tree/master/2.0) are welcome*")
 st.write("**[Let me know your thoughts on this webapp!](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)**")
 st.info("** 👨‍💻 App development under progress. New features coming soon!**")
 
