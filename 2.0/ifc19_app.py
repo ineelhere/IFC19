@@ -4,6 +4,7 @@ from datetime import datetime
 import pytz
 from all_india import *
 from state_wise import *
+from info import *
 
 st.sidebar.subheader("Look out here for more COVID related information")
 st.sidebar.markdown("""
@@ -12,6 +13,10 @@ st.sidebar.markdown("""
 * Feedback - https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform
 
 """)
+response = st.sidebar.button("Resources")
+if response:
+    resources()
+
 
 # st.markdown("")
 st.title("India Fights COVID19 (IFC19)")
@@ -33,8 +38,12 @@ st.warning(f'Confirmed cases till {df_india_daily[["Date"]].reset_index(drop=Tru
 st.success(f'Recoveries till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Recovered"][0]}**')
 st.error(f'Loss of life till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Deceased"][0]}**')
 
-all_india()
-state_wise()
+mode = st.radio("", ["Show cumulative stats till date since outbreak", "Show stats for last 24 hours as per the data available"])
+if mode == "Show cumulative stats till date since outbreak":
+    all_india()
+    state_wise()
+else:
+    st.write("**Coming soon!**")
 
 st.markdown("""
 ___
