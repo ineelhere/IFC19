@@ -24,7 +24,7 @@ st.markdown("""
 
 IST = pytz.timezone('Asia/Kolkata') 
 datetime_ist = datetime.datetime.now(IST)
-st.write(f'**⌛️ Data Fetched on : {datetime_ist.strftime("`%d %B %Y` at `%H:%M:%S` hours")} IST**')
+st.write(f'**⌛️ Data Fetched from source on : {datetime_ist.strftime("`%d %B %Y` at `%H:%M:%S` hours")} IST**')
 df_daily = pd.read_csv("https://api.covid19india.org/csv/latest/states.csv")
 df_daily["Date"] = pd.to_datetime(df_daily.Date)
 df_daily["Date"] = df_daily["Date"].dt.strftime('%d %B %Y')
