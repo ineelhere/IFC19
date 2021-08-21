@@ -9,9 +9,9 @@ from last24hrs import *
 
 st.sidebar.subheader("Look out here for more COVID related information")
 st.sidebar.markdown("""
-* API Source - https://data.covid19india.org/
-* Source Codes - https://github.com/ineelhere/IFC19/tree/master/2.0
-* Feedback - https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform
+* [API Source](https://data.covid19india.org/)
+* [Source Codes](https://github.com/ineelhere/IFC19/tree/master/2.0)
+* [Feedback](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)
 
 """)
 
@@ -64,6 +64,6 @@ html_text = """
 
 """
 st.markdown(html_text, unsafe_allow_html=True)
-st.write("[🌟✨ Collaborations are welcome ✨🌟](https://github.com/ineelhere/IFC19)")
+st.write("**[Let me know your thoughts on this webapp!](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)**")
 st.info("** 👨‍💻 App development under progress. New features coming soon!**")
 
