@@ -18,4 +18,5 @@ def state_wise():
     df_c = df_all[["State", "Confirmed"]].sort_values(by="Confirmed", ascending=False)
     fig = px.pie(df_c, values='Confirmed', names='State', title='Confirmed COVID19 Cases in Indian States')
     fig.update_traces(textposition='inside', textinfo='percent+label')
+    fig.update_layout(hovermode='x')
     st.plotly_chart(fig, use_container_width=True)
