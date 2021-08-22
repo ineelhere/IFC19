@@ -6,6 +6,7 @@ from all_india import *
 from state_wise import *
 from info import *
 from last24hrs import *
+from vaccination import *
 
 st.sidebar.subheader("About the webapp")
 st.sidebar.markdown("""
@@ -59,6 +60,7 @@ st.info(f'Currently **Active** cases in India: **{df_india_daily[["Date", "Confi
 st.success(f'**Recoveries** till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Recovered"][0]}**  \n**Recoveries** in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Recovered"][0]}**')
 st.error(f'**Loss** of life till {df_india_daily[["Date"]].reset_index(drop=True)["Date"][0]} in India: **{df_india_daily[["Date", "Confirmed", "Recovered", "Deceased"]].reset_index(drop=True)["Deceased"][0]}**  \n**Loss** of life in the past 24 hours in India: **{df_india_24hrs.reset_index().head(1)["Deceased"][0]}**')
 
+st.subheader("**Please make a selection below**")
 mode = st.radio("", ["Show cumulative stats till date since outbreak", "Show stats for cases per day", "Show stats on COVID19 vaccination in India"])
 if mode == "Show cumulative stats till date since outbreak":
     all_india()
@@ -66,7 +68,7 @@ if mode == "Show cumulative stats till date since outbreak":
 if mode ==  "Show stats for cases per day" :
     last24hrs()
 if mode == "Show stats on COVID19 vaccination in India":
-    st.info("This section will be available soon!")
+    vaccination()
 
 
 response = st.button("List the Data Sources (Websites)")
