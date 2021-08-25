@@ -20,7 +20,7 @@ def last24hrs():
     value = slider_ph.slider("Move the slider to list data for the last 'n' number of days", 1, total, 7, 1)
 
 
-    st.dataframe(df_india_24hrs.head(value))
+    st.dataframe(df_india_24hrs.head(value).astype(int, errors="ignore"))
     csv = df_india_24hrs.iloc[::-1].reset_index().to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'<a href="data:file/csv;base64,{b64}">Download the above as a CSV File</a> (right-click and save as &lt;some_name&gt;.csv)'
