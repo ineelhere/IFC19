@@ -27,7 +27,7 @@ def last24hrs():
     st.markdown(href, unsafe_allow_html=True)
 
     df_long=pd.melt(df_india_24hrs.iloc[::-1].reset_index(), id_vars=['Date'], value_vars=["Confirmed", "Recovered", "Deceased"])
-    fig = px.line(df_long, x='Date', y='value', color='variable')
+    fig = px.line(df_long, x='Date', y='value', color='variable', title='Daily stats on the COVID19 situation in the Indian States')
     fig.update_layout(hovermode='x')
     st.plotly_chart(fig, use_container_width=True)
 
