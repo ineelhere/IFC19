@@ -21,13 +21,13 @@ def vaccination():
     href = f'<a href="data:file/csv;base64,{b64}">Download the above as a CSV File</a> (right-click and save as &lt;some_name&gt;.csv)'
     st.markdown(href, unsafe_allow_html=True)
 
-    df_long=pd.melt(df_vac.iloc[::-1].reset_index(), id_vars=['Updated On'], value_vars=['Total Doses Administered', 'Sessions', 'First Dose Administered', 'Second Dose Administered'])
-    fig = px.line(df_long, x='Updated On', y='value', color='variable')
+    df_long=pd.melt(df_vac.iloc[::-1].reset_index(), id_vars=['Updated On'], value_vars=['Total Doses Administered', 'First Dose Administered', 'Second Dose Administered'])
+    fig = px.line(df_long, x='Updated On', y='value', color='variable', title = 'Stats on COVID19 vaccine doses administered all over India')
     fig.update_layout(hovermode='x')
     st.plotly_chart(fig, use_container_width=True)
 
     df_long=pd.melt(df_vac.iloc[::-1].reset_index(), id_vars=['Updated On'], value_vars=['Covaxin (Doses Administered)', 'CoviShield (Doses Administered)', 'Sputnik V (Doses Administered)'])
-    fig = px.line(df_long, x='Updated On', y='value', color='variable')
+    fig = px.line(df_long, x='Updated On', y='value', color='variable', title = '''Stats on COVID19 vaccine formulations available in India''')
     fig.update_layout(hovermode='x')
     st.plotly_chart(fig, use_container_width=True)
 
