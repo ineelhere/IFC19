@@ -84,7 +84,7 @@ html_text = """
                 <a href="https://github.com/ineelhere" target="_blank"><img width="22" height="22" src="https://github.com/fluidicon.png" alt="Github"> </a>
 """
 st.markdown(html_text, unsafe_allow_html=True)
-st.write("*[Collaborations](https://github.com/ineelhere/IFC19/tree/master/2.0) are welcome*")
+st.write("*[Collaborations](https://github.com/ineelhere/IFC19/tree/master/2.0) are welcome *")
 st.write("**[Please click here  to share your thoughts on this webapp!](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)**")
 response = st.button("List the Data Sources (Websites)")
 if response:
