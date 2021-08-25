@@ -31,4 +31,4 @@ def vaccination():
     fig.update_layout(hovermode='x')
     st.plotly_chart(fig, use_container_width=True)
 
-    st.error("**GET YOURSELF FULLY VACCINATED TODAY. DO NOT DELAY.**  \nVisit - https://www.cowin.gov.in/")
+    st.error("**GET YOURSELF FULLY VACCINATED TODAY. DO NOT DELAY.**  \nVisit - https://www.cowin.gov.in/ ")
