@@ -14,7 +14,7 @@ def vaccination():
     slider_ph = st.empty()
     st.write(f"**Latest data available on COVID19 vaccination in India** ")
     value = slider_ph.slider("Move the slider to list data for the last 'n' number of days", 1, len(df_vac), 7, 1)
-    st.dataframe(df_vac.head(value).set_index(["Updated On"]))
+    st.dataframe(df_vac.head(value).astype(int, errors="ignore").set_index(["Updated On"]))
     
     csv = (df_vac.to_csv(index=False))
     b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
@@ -31,4 +31,4 @@ def vaccination():
     fig.update_layout(hovermode='x')
     st.plotly_chart(fig, use_container_width=True)
 
-    st.error("**GET YOURSELF FULLY VACCINATED TODAY. DO NOT DELAY.**  \nVisit - https://www.cowin.gov.in/ ")
+    st.error("**GET YOURSELF FULLY VACCINATED TODAY. DO NOT DELAY.**  \nVisit - https://www.cowin.gov.in/")
