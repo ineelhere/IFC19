@@ -44,7 +44,7 @@ html_text = """
 """
 st.sidebar.markdown(html_text, unsafe_allow_html=True)
 
-st.markdown("""# India ![](https://img.icons8.com/fluency/50/000000/india-map.png) Fights COVID19 (IFC19)""")
+st.markdown("""# IFC19 - India ![](https://img.icons8.com/fluency/50/000000/india-map.png) Fights COVID19 """)
 
 st.markdown("""
 *webapp version 2.0* | *best viewed on `desktop mode` if accessed from mobile devices*
