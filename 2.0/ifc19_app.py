@@ -9,7 +9,7 @@ from last24hrs import *
 from vaccination import *
 
 st.sidebar.subheader("About the webapp")
-st.sidebar.success("**This project is fully a personal endeavor. It has not been done under any sort of external influence or funding or sponsorship.**")
+st.sidebar.success("**This webapp has been included in one of the Weekly Roundups on Streamlit community forum under the Geography and Society section: [https://discuss.streamlit.io/t/weekly-roundup-streamlit-books-seogres-metrics-dashboards-and-more/16468](https://discuss.streamlit.io/t/weekly-roundup-streamlit-books-seogres-metrics-dashboards-and-more/16468)**")
 st.sidebar.markdown("""
 * [API Source](https://data.covid19india.org/)
 * [Source Codes](https://github.com/ineelhere/IFC19/tree/master/2.0)
@@ -31,6 +31,7 @@ ___
 With a background in Biotechnology and Bioinformatics, I wanted to expand my knowledge and skillsets in data science programming and web development. While I was self-learning my way out, I was inspired by the several COVID19 dashboards that were coming up from several sources worldwide. So, I thought of creating a similar website myself as a part of the learning process and here is the result!
 The data is being pulled from the crowdsourced API provided by the covid19india.org. The relevant data is then cleaned up and processed using python. The results are then presented on the website using Django framework.
 So, long story short — I have created a website that displays real-time data and statistics along with other information regarding the COVID19 situation in India. Please visit the website and [provide your feedback](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform) on the same.
+
 ___
 **© [Indraneel Chakraborty](https://www.linkedin.com/in/indraneelchakraborty/) | 2021 **
 """)
@@ -43,6 +44,8 @@ html_text = """
                 <a href="https://github.com/ineelhere" target="_blank"><img width="22" height="22" src="https://github.com/fluidicon.png" alt="Github"> </a>
 """
 st.sidebar.markdown(html_text, unsafe_allow_html=True)
+
+st.sidebar.info("**This project is fully a personal endeavor. It has not been done under any sort of external influence or funding or sponsorship.**")
 
 st.markdown("""# IFC19 - India ![](https://img.icons8.com/fluency/50/000000/india-map.png) Fights COVID19 """)
 
@@ -93,7 +96,7 @@ html_text = """
 st.markdown(html_text, unsafe_allow_html=True)
 st.write("*[Collaborations](https://github.com/ineelhere/IFC19/tree/master/2.0) are welcome *")
 st.write("**[Please click here  to share your thoughts on this webapp!](https://docs.google.com/forms/d/e/1FAIpQLSeLCG7pvEx7JlSXMTtO2vpSDt6XVuUyR4VwM5rxfZgxV0Z2Vg/viewform)**")
-response = st.button("List the Data Sources (Websites)")
+response = st.checkbox("List the Data Sources (Websites)")
 if response:
     resources()
 st.info("** 👨‍💻 App development in progress. New features coming soon!**")
