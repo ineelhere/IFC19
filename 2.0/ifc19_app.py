@@ -99,4 +99,4 @@ st.write("**[Please click here  to share your thoughts on this webapp!](https://
 response = st.checkbox("List the Data Sources (Websites)")
 if response:
     resources()
-st.info("** 👨‍💻 App development in progress. New features coming soon!**")
+st.info("** Take care and stay safe.**")
