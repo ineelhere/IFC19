@@ -9,7 +9,7 @@ from last24hrs import *
 from vaccination import *
 
 st.sidebar.subheader("About the webapp")
-st.sidebar.success("**RECOGNITION:  \nThis webapp has been included in one of the Weekly Roundups on Streamlit community forum under the Geography and Society section: [https://discuss.streamlit.io/t/weekly-roundup-streamlit-books-seogres-metrics-dashboards-and-more/16468](https://discuss.streamlit.io/t/weekly-roundup-streamlit-books-seogres-metrics-dashboards-and-more/16468)**")
+st.sidebar.success("**RECOGNITION:  \n\nThis webapp has been included in one of the Weekly Roundups on Streamlit community forum under the Geography and Society section: [https://discuss.streamlit.io/t/weekly-roundup-streamlit-books-seogres-metrics-dashboards-and-more/16468](https://discuss.streamlit.io/t/weekly-roundup-streamlit-books-seogres-metrics-dashboards-and-more/16468)**")
 st.sidebar.markdown("""
 * [API Source](https://data.covid19india.org/)
 * [Source Codes](https://github.com/ineelhere/IFC19/tree/master/2.0)
