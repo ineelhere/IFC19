@@ -14,6 +14,7 @@ The Streamlit hosted app is available at https://share.streamlit.io/ineelhere/if
 * Download all the data in csv format as desired
 * COVID19 Vaccination data for India is added
 * Truly open-source and reproducible, no secrets!
+* Also available inside a container (docker) for easy use/deployment accross different platforms - https://hub.docker.com/repository/docker/ineelhere/ifc19
 
 <hr>
 
