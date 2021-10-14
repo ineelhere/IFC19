@@ -1,3 +1,4 @@
+streamlit >= 0
 pandas >= 0
 datetime >= 0
 plotly >= 0
