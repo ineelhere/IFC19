@@ -31,7 +31,7 @@ ICF19 no longer uses the Django framework. It now runs on Streamlit - an open-so
 * Download all the data in csv format as desired
 * COVID19 Vaccination data for India is added
 * Truly open-source and reproducible, no secrets! [Click here](https://github.com/ineelhere/IFC19/tree/master/2.0)
-* Dockerized version is now available - [https://hub.docker.com/repository/docker/ineelhere/ifc19](https://hub.docker.com/repository/docker/ineelhere/ifc19)
+* Also available inside a container (docker) for easy use/deployment accross different platforms - [https://hub.docker.com/r/ineelhere/ifc19](https://hub.docker.com/r/ineelhere/ifc19)
 
 ___
 ### 👉👉 IFC19 webapp version 1.0 | May 2020 
