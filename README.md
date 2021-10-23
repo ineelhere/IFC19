@@ -1,5 +1,17 @@
 # IFC19 - India Fights COVID19
 
+**IMPORTANT UPDATE**  
+
+After keeping you updated with Covid-19 information for the last 18 months, **`covid19india.org`** API will be stopping it's operations on **31st October, 2021**.
+
+**IFC19 will be online post 31st October, but with the last available data. It will take some time migrating to other data collection & curation mechanism(s) for displaying realtime stats.**
+
+Till then, your co-operation is highly appreciated. Stay safe and take care! 
+
+-[Indraneel Chakraborty](https://www.linkedin.com/in/indraneelchakraborty/)
+
+Read more here [https://blog.covid19india.org/2021/08/07/end/](https://blog.covid19india.org/2021/08/07/end/)
+
 ### 👋👋 IFC19 webapp version 2.0 is here! | August 2021 
 ICF19 no longer uses the Django framework. <br>
 It now runs on Streamlit - an open-source Python library that <br>
