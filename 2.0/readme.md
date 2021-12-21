@@ -28,6 +28,12 @@ The Streamlit hosted app is available at https://share.streamlit.io/ineelhere/if
 * Truly open-source and reproducible, no secrets!
 * Also available inside a container (docker) for easy use/deployment accross different platforms - https://hub.docker.com/r/ineelhere/ifc19
 
+#### How to run via `docker`-
+* Pull the docker using the command `docker pull ineelhere/ifc19`
+* Run the same using the command `docker run ineelhere/ifc19`
+* If not automatically redirected, open your browser and go to http://172.17.0.2:8501/ (This might be different on your system. However, the port will always be `8501`)
+* You might need to use `sudo` or grant relevant permissions before the above commands in case you find the error - `Got permission denied`.
+
 <hr>
 
 ### 👉👉 IFC19 webapp version 1.0 | May 2020
