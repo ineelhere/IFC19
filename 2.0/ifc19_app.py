@@ -10,7 +10,7 @@ from vaccination import *
 
 st.error("""
 **IMPORTANT UPDATE**  \n\nAfter keeping you updated with Covid-19 information for the last 18 months, **`covid19india.org`** API will be stopping it's operations on **31st October, 2021**.  \n
-**IFC19 will be online post 31st October, but with the last available data. \n
+**IFC19 will be online post 31st October, but with the last available data.** \n
  
   \nRead more here [https://blog.covid19india.org/2021/08/07/end/](https://blog.covid19india.org/2021/08/07/end/)
 """)
