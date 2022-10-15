@@ -15,7 +15,7 @@ makes it easy to create and share beautiful, custom web apps <br>
 for machine learning and data science.
 
 The old website (https://indraneel.pythonanywhere.com/) is now deprecated and allows users to visit the new version. <br> 
-The Streamlit hosted app is available at https://share.streamlit.io/ineelhere/ifc19/2.0/ifc19_app.py
+The Streamlit hosted app is available at https://indiafightscovid19.streamlitapp.com/
 
 #### New features in this release
 * More visualizations - interactive and downloadable
@@ -39,4 +39,4 @@ The data is being pulled from the crowdsourced API provided by the covid19india.
 
 So, long story short — I have created a website that displays real-time data and statistics along with other information regarding the COVID19 situation in India. This project is fully a personal endeavor. It has not been done under any sort of external influence or funding or sponsorship. Please visit the website and provide feedback on the same.
 
-Website URL - https://indraneel.pythonanywhere.com/ 
+Website URL - https://indiafightscovid19.streamlitapp.com/ [NEW]
